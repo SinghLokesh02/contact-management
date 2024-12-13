@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create User</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="/">Create</a></li>
+          <li><a href="show-data">Show Data</a></li>
+          <li><a href="search">Search</a></li>
+          <li><a href="update">Update</a></li>
+          <li><a href="delete">Delete</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <div class="container">
+        <h1 class="h1">This is the Create Page</h1>
+        <% if(data){ %>
+        <h2 class="h2"><%= data%></h2>
+        <% } %>
+
+        <form action="/create-request" method="post">
+          <div class="name">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required />
+          </div>
+          <div class="email">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+
+          <div class="contact">
+            <label for="contact">Contact:</label>
+            <input type="number" name="contact" id="contact" required />
+          </div>
+
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

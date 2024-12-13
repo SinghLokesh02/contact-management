@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update User</title>
+  <link rel="stylesheet" href="/stylesheets/update.css">
+</head>
+<body>
+  <header>
+    <nav class="nav-bar">
+        <ul>
+          <li><a href="/">Create</a></li>
+          <li><a href="show-data">Show Data</a></li>
+          <li><a href="search">Search</a></li>
+          <li><a href="update">Update</a></li>
+          <li><a href="delete">Delete</a></li>
+        </ul>
+      </nav>
+  </header>
+  <section>
+    <div class="container">
+      <h1 class="h1">This is the Update Page</h1>
+        <% if(data){ %>
+        <p class="h2" style="color: red;"> <%= data%> </p>
+        <% } %>
+      <form action="/update-request" method="post">
+        <div class="email">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="Old">
+          <label for="password">Old Contact:</label>
+          <input type="number" name="contact" id="password" required>
+        </div>
+        <div class="new">
+          <label for="new-password">New Contact:</label>
+          <input type="number" name="ncontact" id="new-password" required>
+        </div>
+
+        <input type="submit" value="Update" class="btn">
+      </form>
+    </div>
+  </section>
+</body>
+</html>
